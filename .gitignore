@@ -1,0 +1,6 @@
+# Codex/agents skill cache
+.agents/
+
+# Office temporary lock files
+~$*
+

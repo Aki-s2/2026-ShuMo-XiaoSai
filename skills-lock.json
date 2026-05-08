@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "math-modeling": {
+      "source": "XiaoMaColtAI/math-modeling-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "f95df11a1fad0a12fb91357fb90cf21b1570c23df20cdb62ff936d58dd4296ac"
+    }
+  }
+}
