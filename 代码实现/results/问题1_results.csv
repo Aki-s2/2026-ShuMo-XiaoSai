@@ -1,0 +1,2 @@
+﻿uav_id,strategy,algorithm,cell_size_km,target_count,candidate_count,all_target_count,reward,expected_reward,time,planning_time,max_time,risk_cost,survival,energy,feasible
+UAV-04,稳健,贪心+2-opt,0.25,5,50,384,8.45063,4.948609,11.782573,0.691879,120.0,1.206198,0.29933324,13.510885,True

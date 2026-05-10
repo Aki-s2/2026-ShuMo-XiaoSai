@@ -1,0 +1,62 @@
+问题3：事件触发动态重规划结果
+{'scenario': '主场景-综合动态战场', 'trigger': '主场景：同时包含威胁突增、目标增补、通信中断、战损和低电量补给。', 'strategy': '事件触发滚动重规划 + 固定补给点再入队', 'completed_targets': 23, 'completion_rate': 0.273612, 'actual_reward': 749.00854, 'expected_reward': 328.589895, 'survival_index': 0.03083052, 'load_balance': 0.73913, 'replan_count': 23, 'resupply_count': 4, 'rtb_count': 5, 'lost_count': 1, 'comm_isolated_steps': 1, 'new_target_count': 9, 'removed_target_count': 3, 'efficiency_J': 0.569695}
+{'scenario': '补充场景-通信受限', 'trigger': '强调通信中断、恢复与孤岛自治。', 'strategy': '孤岛自治 + 周期同步', 'completed_targets': 29, 'completion_rate': 0.411611, 'actual_reward': 1020.71563, 'expected_reward': 393.948921, 'survival_index': 0.03909971, 'load_balance': 0.724138, 'replan_count': 20, 'resupply_count': 2, 'rtb_count': 3, 'lost_count': 0, 'comm_isolated_steps': 11, 'new_target_count': 4, 'removed_target_count': 2, 'efficiency_J': 0.605965}
+{'scenario': '补充场景-高威胁压制', 'trigger': '强调多次局部威胁突增与规避重规划。', 'strategy': '高威胁规避 + 保守返航', 'completed_targets': 33, 'completion_rate': 0.55078, 'actual_reward': 1336.566, 'expected_reward': 429.128041, 'survival_index': 0.04538375, 'load_balance': 0.544446, 'replan_count': 18, 'resupply_count': 2, 'rtb_count': 3, 'lost_count': 1, 'comm_isolated_steps': 0, 'new_target_count': 3, 'removed_target_count': 0, 'efficiency_J': 0.631921}
+{'scenario': '补充场景-战损补给联动', 'trigger': '强调战损后任务接管，以及补给后再入队继续执行任务。', 'strategy': '战损接管 + 补给再入队', 'completed_targets': 27, 'completion_rate': 0.368731, 'actual_reward': 976.9044, 'expected_reward': 415.953781, 'survival_index': 0.0589082, 'load_balance': 0.419097, 'replan_count': 19, 'resupply_count': 2, 'rtb_count': 3, 'lost_count': 2, 'comm_isolated_steps': 6, 'new_target_count': 7, 'removed_target_count': 2, 'efficiency_J': 0.561908}
+
+事件触发表：
+{'scenario': '主场景-综合动态战场', 'time': 6, 'event': 'threat_up', 'object_id': '-', 'condition': '前沿防空火力增强', 'decision': '局部规避并滚动重规划', 'effect': '前沿防空火力增强，风险场在 (118.0, 165.0) 周围抬升'}
+{'scenario': '主场景-综合动态战场', 'time': 8, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '主场景-综合动态战场', 'time': 10, 'event': 'new_targets', 'object_id': '-', 'condition': '前沿新增侦察目标', 'decision': '新增任务加入候选池', 'effect': '新增 5 个任务目标'}
+{'scenario': '主场景-综合动态战场', 'time': 14, 'event': 'comm_loss', 'object_id': 'UAV-02', 'condition': 'UAV-02 通信中断', 'decision': '孤岛自治并保持局部任务', 'effect': 'UAV-02 进入孤岛自治'}
+{'scenario': '主场景-综合动态战场', 'time': 16, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '主场景-综合动态战场', 'time': 18, 'event': 'uav_lost', 'object_id': 'UAV-05', 'condition': 'UAV-05 战损退出', 'decision': '释放剩余任务并重新分配', 'effect': 'UAV-05 战损退出'}
+{'scenario': '主场景-综合动态战场', 'time': 22, 'event': 'remove_targets', 'object_id': '-', 'condition': '已暴露目标转移', 'decision': '剔除失效目标后重规划', 'effect': '移除 3 个失效目标'}
+{'scenario': '主场景-综合动态战场', 'time': 24, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '主场景-综合动态战场', 'time': 27, 'event': 'low_battery', 'object_id': 'UAV-04', 'condition': 'UAV-04 低电量返航补给', 'decision': '返航补给，补给后再入队', 'effect': 'UAV-04 进入返航补给流程'}
+{'scenario': '主场景-综合动态战场', 'time': 32, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '主场景-综合动态战场', 'time': 34, 'event': 'new_targets', 'object_id': '-', 'condition': '纵深区域发现新增目标', 'decision': '新增任务加入候选池', 'effect': '新增 4 个任务目标'}
+{'scenario': '主场景-综合动态战场', 'time': 40, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '主场景-综合动态战场', 'time': 42, 'event': 'threat_up', 'object_id': '-', 'condition': '南侧威胁再度抬升', 'decision': '局部规避并滚动重规划', 'effect': '南侧威胁再度抬升，风险场在 (150.0, 255.0) 周围抬升'}
+{'scenario': '主场景-综合动态战场', 'time': 48, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '主场景-综合动态战场', 'time': 56, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-通信受限', 'time': 6, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-通信受限', 'time': 8, 'event': 'comm_loss', 'object_id': 'UAV-02,UAV-03', 'condition': 'UAV-02 与 UAV-03 同时断链', 'decision': '孤岛自治并保持局部任务', 'effect': 'UAV-02,UAV-03 进入孤岛自治'}
+{'scenario': '补充场景-通信受限', 'time': 12, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-通信受限', 'time': 16, 'event': 'new_targets', 'object_id': '-', 'condition': '通信受限下新增目标', 'decision': '新增任务加入候选池', 'effect': '新增 4 个任务目标'}
+{'scenario': '补充场景-通信受限', 'time': 18, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-通信受限', 'time': 24, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-通信受限', 'time': 24, 'event': 'threat_up', 'object_id': '-', 'condition': '断链区域威胁上升', 'decision': '局部规避并滚动重规划', 'effect': '断链区域威胁上升，风险场在 (92.0, 120.0) 周围抬升'}
+{'scenario': '补充场景-通信受限', 'time': 30, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-通信受限', 'time': 36, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-通信受限', 'time': 36, 'event': 'remove_targets', 'object_id': '-', 'condition': '一批目标丢失', 'decision': '剔除失效目标后重规划', 'effect': '移除 2 个失效目标'}
+{'scenario': '补充场景-通信受限', 'time': 42, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-通信受限', 'time': 48, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-通信受限', 'time': 54, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-高威胁压制', 'time': 5, 'event': 'threat_up', 'object_id': '-', 'condition': '北部防空突增', 'decision': '局部规避并滚动重规划', 'effect': '北部防空突增，风险场在 (85.0, 90.0) 周围抬升'}
+{'scenario': '补充场景-高威胁压制', 'time': 7, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-高威胁压制', 'time': 12, 'event': 'threat_up', 'object_id': '-', 'condition': '中部威胁外扩', 'decision': '局部规避并滚动重规划', 'effect': '中部威胁外扩，风险场在 (135.0, 185.0) 周围抬升'}
+{'scenario': '补充场景-高威胁压制', 'time': 14, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-高威胁压制', 'time': 20, 'event': 'new_targets', 'object_id': '-', 'condition': '高威胁区发现高价值目标', 'decision': '新增任务加入候选池', 'effect': '新增 3 个任务目标'}
+{'scenario': '补充场景-高威胁压制', 'time': 21, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-高威胁压制', 'time': 28, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-高威胁压制', 'time': 28, 'event': 'low_battery', 'object_id': 'UAV-03', 'condition': 'UAV-03 紧急返航', 'decision': '返航补给，补给后再入队', 'effect': 'UAV-03 进入返航补给流程'}
+{'scenario': '补充场景-高威胁压制', 'time': 35, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-高威胁压制', 'time': 38, 'event': 'threat_up', 'object_id': '-', 'condition': '南部压制火力形成', 'decision': '局部规避并滚动重规划', 'effect': '南部压制火力形成，风险场在 (175.0, 285.0) 周围抬升'}
+{'scenario': '补充场景-高威胁压制', 'time': 42, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-高威胁压制', 'time': 49, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-高威胁压制', 'time': 56, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-战损补给联动', 'time': 8, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-战损补给联动', 'time': 9, 'event': 'uav_lost', 'object_id': 'UAV-03', 'condition': 'UAV-03 战损退出', 'decision': '释放剩余任务并重新分配', 'effect': 'UAV-03 战损退出'}
+{'scenario': '补充场景-战损补给联动', 'time': 14, 'event': 'new_targets', 'object_id': '-', 'condition': '战损后新增侦察目标', 'decision': '新增任务加入候选池', 'effect': '新增 4 个任务目标'}
+{'scenario': '补充场景-战损补给联动', 'time': 16, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-战损补给联动', 'time': 21, 'event': 'low_battery', 'object_id': 'UAV-05', 'condition': 'UAV-05 返航补给', 'decision': '返航补给，补给后再入队', 'effect': 'UAV-05 进入返航补给流程'}
+{'scenario': '补充场景-战损补给联动', 'time': 24, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-战损补给联动', 'time': 30, 'event': 'comm_loss', 'object_id': 'UAV-04', 'condition': 'UAV-04 短时失联', 'decision': '孤岛自治并保持局部任务', 'effect': 'UAV-04 进入孤岛自治'}
+{'scenario': '补充场景-战损补给联动', 'time': 32, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-战损补给联动', 'time': 40, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-战损补给联动', 'time': 40, 'event': 'new_targets', 'object_id': '-', 'condition': '补给后重新发现目标', 'decision': '新增任务加入候选池', 'effect': '新增 3 个任务目标'}
+{'scenario': '补充场景-战损补给联动', 'time': 46, 'event': 'remove_targets', 'object_id': '-', 'condition': '部分目标失效', 'decision': '剔除失效目标后重规划', 'effect': '移除 2 个失效目标'}
+{'scenario': '补充场景-战损补给联动', 'time': 48, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-战损补给联动', 'time': 56, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}
+{'scenario': '补充场景-战损补给联动', 'time': 64, 'event': 'sync', 'object_id': '-', 'condition': '周期同步到时', 'decision': '执行滚动重规划', 'effect': '同步剩余任务与风险场'}

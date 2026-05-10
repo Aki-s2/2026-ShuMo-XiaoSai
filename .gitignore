@@ -1,6 +1,24 @@
-# Codex/agents skill cache
-.agents/
+# Codex/agents 技能目录
+.agents/*
+!.agents/skills/
+.agents/skills/*
+!.agents/skills/math-modeling/
+!.agents/skills/math-modeling/**
 
-# Office temporary lock files
+# Python 缓存
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Node 依赖与临时工程文件
+node_modules/
+package.json
+package-lock.json
+
+# 文档与附件临时导出
+doc_format_dump.json
+template_format_dump.json
+*_format_carved.zip
+
+# Office 临时锁文件
 ~$*
-

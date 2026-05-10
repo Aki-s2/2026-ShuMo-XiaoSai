@@ -1,11 +1,125 @@
 {
   "version": 1,
   "skills": {
+    "compression": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/compression/SKILL.md",
+      "computedHash": "d3866b937c358671c3f88038ceeb66f756afeb6a993a6d49c49f00fdde8b955f"
+    },
+    "docx": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/docx/SKILL.md",
+      "computedHash": "86fe979a0f8aa69da907661fbee0b4be481835fc36a4eac7b5710c5b2c412b06"
+    },
+    "echarts": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/echarts/SKILL.md",
+      "computedHash": "8f371b8a8711d96025ae1be99fb142309b5569ae00a0d5069961358a5cf11265"
+    },
+    "fapiao": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/fapiao/SKILL.md",
+      "computedHash": "24557619c7607a9afc549ec787914d30058fdc0ffd883dd81d54627a8942b553"
+    },
+    "fs": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/fs/SKILL.md",
+      "computedHash": "0819f966650f804236445b5c1180919f9467fbe920d334aafc0d90eb27f9aef8"
+    },
+    "hackernews-node": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/hacknews/SKILL.md",
+      "computedHash": "fcfeb777aa5f12f91cfe2ecb23d47256269c825c95a4472ad046ab8723e53949"
+    },
+    "kb-editor": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/kb-editor/SKILL.md",
+      "computedHash": "f36faf97e635e6dc8e07f31d751670ed07aeda0360696f4ea366bc1369f44475"
+    },
+    "kb-recall": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/kb-recall/SKILL.md",
+      "computedHash": "6852df83c4dff65f243fbbfec51746842ad7eeec221833cf74f67eae30d6635c"
+    },
     "math-modeling": {
       "source": "XiaoMaColtAI/math-modeling-skill",
       "sourceType": "github",
       "skillPath": "SKILL.md",
       "computedHash": "f95df11a1fad0a12fb91357fb90cf21b1570c23df20cdb62ff936d58dd4296ac"
+    },
+    "net-operations": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/net-operations/SKILL.md",
+      "computedHash": "87863746c2e562e19d4decc999729395943e11c5779723bc019b1b7f202f431f"
+    },
+    "pdf": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/pdf/SKILL.md",
+      "computedHash": "2f223d2a577509669973e4153db2f6659d546dc949ac2a19ee132029c09726ee"
+    },
+    "pptx": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/pptx/SKILL.md",
+      "computedHash": "c6321693381e5bc80c80897962f2ffa0652d4562cbc20bea34e226df8efa9ed6"
+    },
+    "pypdf": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/pypdf/SKILL.md",
+      "computedHash": "61cd80af6a18add829f96b2712fa2efb67a218c7c249740d9d7537cd0d8e4458"
+    },
+    "remote-llm": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/remote-llm/SKILL.md",
+      "computedHash": "08a6922b6a36f4c5e99dcf226262af5323655ec61a90df64fbc127cb3ead076f"
+    },
+    "searxng": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/searxng/SKILL.md",
+      "computedHash": "b92da144206fd0906356ec4878f1c3192d5b42c021a3d0d3cd73e6bfc8ae912c"
+    },
+    "skill-manager": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/skill-manager/SKILL.md",
+      "computedHash": "e343a36b9bb2180acc3d8959f86e26b3cf928adbd125711c62f9dd2a561d222c"
+    },
+    "ssh": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/erix-ssh/SKILL.md",
+      "computedHash": "7a41970ee42466dfd516c056a82146362aac64c3629aa689e9d77f18521745c4"
+    },
+    "unifuncs": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/unifuncs/SKILL.md",
+      "computedHash": "5b3faaee402fe19491a5b95c25208a9e560805e8475aa753e1c364c9d961109f"
+    },
+    "wikijs": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/wikijs/SKILL.md",
+      "computedHash": "3ea55a980a676764de8475e338c05cc0b2d74bd595e27681b897d6df74c426a8"
+    },
+    "xlsx": {
+      "source": "ErixWong/touwaka-ai-mate",
+      "sourceType": "github",
+      "skillPath": "data/skills/xlsx/SKILL.md",
+      "computedHash": "36e2971f84f675d9a1231a4f862446d37f18726b43a5eb475984fac1d2b5636a"
     }
   }
 }

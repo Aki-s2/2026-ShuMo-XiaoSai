@@ -1,0 +1,22 @@
+??2?????????????
+risk_scale: 1.0
+cell_size_km: 0.25
+all_targets: 384
+reachable_targets: 384
+candidate_targets: 160
+completed_targets: 52
+completion_rate: 0.525052
+total_expected_reward: 86.51293
+total_time: 378.744184
+total_risk_cost: 155.263111
+total_energy: 765.292093
+mean_survival: 0.00016432
+load_balance: 0.350041
+efficiency_J: 0.317044
+
+???????
+{'uav_id': 'UAV-01', 'target_count': 4, 'target_sequence': '22->33->59->4', 'time': 30.153082, 'max_time': 40.0, 'reward': 31.01448, 'expected_reward': 2.271693, 'risk_cost': 23.598049, 'survival': 0.0, 'energy': 104.612329, 'feasible': True}
+{'uav_id': 'UAV-02', 'target_count': 7, 'target_sequence': '1->7->16->42->44->75->91', 'time': 34.620243, 'max_time': 35.0, 'reward': 21.36517, 'expected_reward': 4.925428, 'risk_cost': 7.104251, 'survival': 0.0008216, 'energy': 119.319448, 'feasible': True}
+{'uav_id': 'UAV-03', 'target_count': 5, 'target_sequence': '58->39->37->87->55', 'time': 44.60576, 'max_time': 60.0, 'reward': 86.11686, 'expected_reward': 0.106937, 'risk_cost': 24.540655, 'survival': 0.0, 'energy': 114.064589, 'feasible': True}
+{'uav_id': 'UAV-04', 'target_count': 11, 'target_sequence': '119->150->93->205->215->314->326->300->287->268->266', 'time': 119.969238, 'max_time': 120.0, 'reward': 263.36221, 'expected_reward': 0.699747, 'risk_cost': 35.347385, 'survival': 0.0, 'energy': 217.066723, 'feasible': True}
+{'uav_id': 'UAV-05', 'target_count': 25, 'target_sequence': '167->181->164->173->159->165->185->102->149->203->257->278->307->292->318->352->291->271->241->275->270->202->122->169->211', 'time': 149.395861, 'max_time': 150.0, 'reward': 1736.86555, 'expected_reward': 78.509124, 'risk_cost': 64.67277, 'survival': 0.0, 'energy': 210.229005, 'feasible': True}

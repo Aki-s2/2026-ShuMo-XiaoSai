@@ -1,0 +1,4 @@
+﻿cell_size_km,all_target_count,candidate_count,completed_targets,time,expected_reward,survival,feasible
+0.25,384,50,5,11.782573,4.948609,0.29933324,True
+0.5,384,50,5,18.565145,4.948609,0.29933324,True
+1.0,384,24,5,32.130291,4.948609,0.29933324,True

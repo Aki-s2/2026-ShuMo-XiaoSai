@@ -1,0 +1,2 @@
+﻿risk_scale,cell_size_km,all_targets,reachable_targets,candidate_targets,completed_targets,completion_rate,total_expected_reward,total_time,total_risk_cost,total_energy,mean_survival,load_balance,efficiency_J
+1.0,0.25,384,384,160,52,0.525052,86.51293,378.744184,155.263111,765.292093,0.00016432,0.350041,0.317044

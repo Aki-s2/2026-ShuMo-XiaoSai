@@ -1,0 +1,2 @@
+﻿strategy,algorithm,candidate_count,target_count,reward,expected_reward,survival,risk_cost,time,planning_time,energy
+稳健,贪心+2-opt,50,5,8.45063,4.948609,0.29933324,1.206198,11.782573,0.691879,13.510885
